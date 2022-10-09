@@ -16,6 +16,3 @@ hamburgerMenu.addEventListener("click",()=>{
     navBar.classList.toggle("navBarChange");
 
 })
-.menuDishes.addEventListener("click",()=>{
-    dishes.classList.toggle("dishesChange")
-})
