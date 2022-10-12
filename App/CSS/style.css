@@ -11,20 +11,19 @@ html{
 }
 
 :root{
-    --white-color:whitesmoke;
-    --bg-color: #343a40;
+    --white-color:rgb(211, 205, 205);
+    --bg-color: rgb(52, 58, 64);
     --box-shadow:rgb(21, 27, 30);
 }
 
 body{
     min-height:100vh;
     background-color:var(--bg-color);
-    padding:2em;
     
-   
 }
 .container{
     min-height:100vh;
+    padding:2em;
 }
 .hero{
     position: absolute;
@@ -153,54 +152,7 @@ h1{
 }
 
 
-@media only screen and (min-width:758px){
-    body{
-        padding-inline:6em;
-    }
-    h1{
-        font-size:8em;
-    }
-    .navBar{
-        
-        width:calc(100% - 12em);
-        
-    }
-}
 
-@media only screen and (min-width:992px){
-    body{
-        padding-inline:10em;
-        background-color:rgb(0, 0, 0);
-    }
-    .hero{
-        width:55%;
-        height:45em;
-        left:45%;
-        top:0;
-        border:none;
-
-        
-    background-image:linear-gradient(
-        90deg,
-        rgb(0, 0, 0),
-        rgb(0, 0, 0, 0.1)
-    ),url("/Images/hero.jpg");
-    outline:none;
-    }
-    h1{
-        font-size:8em;
-        position: relative;
-        right:100%;
-        letter-spacing:6px;
-        width:100%;
-        
-        
-    }
-
-    .hamburgerMenu{
-        display:none;
-    }
-}
 /* main section */
 main{
     margin-top:2em;
@@ -214,6 +166,7 @@ main h2{
 .about p{
     font-size:2rem;
     margin-block:1em;
+    
 }
 .about p:nth-of-type(1)::first-letter{
     font-size:4rem;
@@ -224,17 +177,18 @@ main h2{
     margin-block:1em;
 }
 
-.countriesDishes{
-   
+.menu{
     display:flex;
     justify-content:center;
     align-items:center;
 
-    flex-flow:wrap column;
+    flex-direction:column;
 }
+
+
 .card{
     width:100%;
-    max-width:36em;
+    
     height:35em;
     
     margin-block:2em;
@@ -256,7 +210,7 @@ main h2{
     object-fit:cover;
     border-radius:15px;
     
-    transition:all 0.5s;
+    transition:all 0.15s;
     
 }
 .card img:hover{
@@ -270,4 +224,115 @@ main h2{
     position:absolute;
     bottom:2.5%;
     left:5%;
+}
+
+
+
+
+
+
+footer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    font-family:Arial, Helvetica, sans-serif;
+    /* width:100%; */
+    
+}
+hr{
+    width:100%;
+    border:0.4px solid gray;
+}
+.contact{
+    padding-block:2em;
+}
+.contact h4{
+    color:var(--white-color);
+    font-size:3rem;
+    letter-spacing:5px;
+    padding-block:0.3em;
+}
+
+.contact a{
+    color:rosybrown;
+    font-size:1.4rem;
+}
+
+.contact p, .right p{
+    color:var(--white-color);
+    font-size:1.4rem;
+}
+
+.right {
+    padding:1em;
+}
+
+
+
+@media only screen and (min-width:758px){
+    header,main{
+        padding-inline:6em;
+    }
+    h1{
+        font-size:8em;
+    }
+    .navBar{
+        
+        width:calc(100% - 12em);
+        
+    }
+    .menu {
+        display:flex;
+        justify-content:space-evenly;
+        flex-direction:row; 
+        
+        gap:2em;
+        
+    }
+}
+
+@media only screen and (min-width:992px){
+    body{
+        background-color:var(--bg-color);
+    }
+    header,main{
+        padding-inline:10em;
+      
+    }
+    .hero{
+        width:55%;
+        height:45em;
+        left:45%;
+        top:0;
+        border:none;
+
+        
+    background-image:linear-gradient(
+        90deg,
+        hsl(214, 10%, 23%,1),
+        hsla(211, 10%, 23%, 0.05)
+    ),url("/Images/hero.jpg");
+    outline:none;
+    }
+    h1{
+        font-size:8em;
+        position: relative;
+        right:100%;
+        letter-spacing:6px;
+        width:100%;
+    }
+
+    .hamburgerMenu{
+        display:none;
+    }
+
+     footer .contact{
+        width:100%;
+        padding-inline:10em;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        
+     }
 }
